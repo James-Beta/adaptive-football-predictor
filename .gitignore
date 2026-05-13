@@ -20,6 +20,6 @@ data/raw/
 
 # 4. EXPLICITLY ALLOW THE FRONTEND & PROCESSED DATA
 !app/
-!data/predictions
+!data/predictions/
 !data/processed/
 !logs/
