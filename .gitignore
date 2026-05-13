@@ -12,6 +12,7 @@ checkpoints/
 run_pipeline.py
 run_live_predictions.py
 simulate_backtest.py
+test.ipynb
 daily_run.bat
 
 # 3. IGNORE RAW DATA (Only keep the processed stuff)
