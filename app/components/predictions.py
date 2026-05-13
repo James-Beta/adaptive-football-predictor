@@ -5,7 +5,7 @@ from pathlib import Path
 @st.cache_data(ttl=3600)
 def load_predictions():
     try:
-        return pd.read_csv("data/processed/upcoming_predictions.csv")
+        return pd.read_csv("data/predictions/upcoming_predictions.csv")
     except FileNotFoundError:
         return pd.DataFrame()
 
