@@ -1,0 +1,25 @@
+# Data Manipulation & Math
+pandas
+numpy
+scipy
+
+# Timezones
+pytz>=2023.3
+
+# Web Scraping & Async I/O
+requests>=2.31.0
+httpx>=0.25.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# File Formats (Required for saving/loading .parquet files)
+pyarrow>=14.0.0
+
+# Frontend App
+streamlit>=1.28.0
+ipykernel
+
+# Machine Learning
+scikit-learn
+lightgbm
+joblib

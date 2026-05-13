@@ -1,0 +1,23 @@
+# 1. Ignore Python Cache and Virtual Environments
+__pycache__/
+venv/
+.env
+
+# 2. STRICTLY IGNORE THE BACKEND AI & SCRAPING CODE
+models/
+pipeline/
+utils/
+config/
+checkpoints/
+run_pipeline.py
+run_live_predictions.py
+simulate_backtest.py
+daily_run.bat
+
+# 3. IGNORE RAW DATA (Only keep the processed stuff)
+data/raw/
+
+# 4. EXPLICITLY ALLOW THE FRONTEND & PROCESSED DATA
+!app/
+!data/processed/
+!logs/
