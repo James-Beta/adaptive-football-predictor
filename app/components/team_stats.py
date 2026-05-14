@@ -18,12 +18,12 @@ def render_team_stats():
         return
 
     # Assuming your metrics file has a 'Team' column. Adjust if it is named differently!
-    if 'Team' in df.columns:
-        teams = sorted(df['Team'].unique())
+    if 'team' in df.columns:
+        teams = sorted(df['team'].unique())
         selected_team = st.selectbox("Search for a Team:", teams)
         
         # Filter and show only the most recent 10 records for that team
-        team_df = df[df['Team'] == selected_team].tail(10)
+        team_df = df[df['team'] == selected_team].head(10)
         st.dataframe(team_df, hide_index=True, width='stretch')
     else:
         st.dataframe(df.tail(100), hide_index=True, width='stretch')

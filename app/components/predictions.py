@@ -10,7 +10,7 @@ def load_predictions():
         return pd.DataFrame()
 
 def render_predictions():
-    st.header("🔮 This Weekend's Predictions")
+    st.header("This Week's Predictions")
     
     df = load_predictions()
     

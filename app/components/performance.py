@@ -9,7 +9,7 @@ def load_logs():
         return pd.DataFrame()
 
 def render_performance():
-    st.header("📈 AI Continuous Learning Tracker")
+    st.header("Continuous Learning Tracker")
     
     df = load_logs()
     
