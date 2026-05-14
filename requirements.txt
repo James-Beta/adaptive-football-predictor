@@ -18,6 +18,7 @@ pyarrow>=14.0.0
 # Frontend App
 streamlit>=1.28.0
 ipykernel
+plotly==5.20.0
 
 # Machine Learning
 scikit-learn
