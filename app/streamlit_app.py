@@ -10,22 +10,22 @@ from components.performance import render_performance
 st.set_page_config(page_title="Football Predictor", page_icon="⚽", layout="wide")
 
 def main():
-    st.sidebar.title("⚽ Navigation")
+    st.sidebar.title("Navigation")
     
     # The sidebar navigation menu
     page = st.sidebar.radio(
         "Go to", 
-        ["🔮 Live Predictions", "📅 Raw Fixtures", "📊 Team Form (Metrics)", "📈 AI Performance"]
+        ["Raw Fixtures", "Team Form (Metrics)", "Live Predictions", "Classifier Performance"]
     )
 
     # Route to the correct module based on selection
-    if page == "🔮 Live Predictions":
-        render_predictions()
-    elif page == "📅 Raw Fixtures":
+    if page == "Raw Fixtures":
         render_fixtures()
-    elif page == "📊 Team Form (Metrics)":
+    elif page == "Team Form (Metrics)":
         render_team_stats()
-    elif page == "📈 AI Performance":
+    elif page == "Live Predictions":
+        render_predictions()
+    elif page == "Classifier Performance":
         render_performance()
 
 if __name__ == "__main__":

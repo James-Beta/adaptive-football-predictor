@@ -6,7 +6,7 @@ from pathlib import Path
 @st.cache_data(ttl=3600)
 def load_data():
     try:
-        preds = pd.read_csv("data/processed/upcoming_predictions.csv")
+        preds = pd.read_csv("data/predictions/upcoming_predictions.csv")
         # We also need the metrics to draw the chart!
         metrics = pd.read_parquet("data/processed/team_metrics.parquet")
         return preds, metrics
@@ -173,7 +173,7 @@ def create_radar_chart(home_team, away_team, metrics_df):
     return fig
 
 def render_predictions():
-    st.header("🔮 This Weekend's Predictions")
+    st.header(" This Weekend's Predictions")
     
     preds_df, metrics_df = load_data()
     
@@ -198,7 +198,7 @@ def render_predictions():
 
     # 2. The Interactive Head-to-Head Radar Chart
     if not metrics_df.empty:
-        st.subheader("🕸️ Matchup Analyzer")
+        st.subheader("Team Comparison")
         
         # Create a dropdown to select a specific match
         match_options = preds_df.apply(lambda row: f"{row['HomeTeam']} vs {row['AwayTeam']}", axis=1).tolist()
