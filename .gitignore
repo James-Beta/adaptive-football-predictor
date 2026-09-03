@@ -15,6 +15,7 @@ simulate_backtest.py
 test.ipynb
 daily_run.bat
 train_model.py
+note.txt
 
 # 3. IGNORE RAW DATA (Only keep the processed stuff)
 data/raw/
