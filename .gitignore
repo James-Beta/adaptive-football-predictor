@@ -17,11 +17,10 @@ daily_run.bat
 train_model.py
 note.txt
 
-# 3. IGNORE RAW DATA (Only keep the processed stuff)
-data/raw/
+
+
 
 # 4. EXPLICITLY ALLOW THE FRONTEND & PROCESSED DATA
 !app/
-!data/predictions/
-!data/processed/
+!data/
 !logs/
