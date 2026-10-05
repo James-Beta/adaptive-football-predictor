@@ -1,7 +1,2 @@
 Date,HomeTeam,AwayTeam,Prob_Home_raw,Prob_Draw_raw,Prob_Away_raw,Prob_Home,Prob_Draw,Prob_Away,Predicted_Result,Expected_Home_Goals,Expected_Away_Goals,Expected_Total_Goals,Home_Has_History,Away_Has_History
-2026-10-04 13:00:00+01:00,Sociedad B,Granada,0.389,0.285,0.351,0.38,0.278,0.342,H,0.75,0.88,1.63,True,True
-2026-10-04 15:15:00+01:00,Sp Gijon,Celta B,0.383,0.308,0.327,0.376,0.303,0.321,H,0.75,0.88,1.62,True,True
-2026-10-04 17:30:00+01:00,Castellon,Ceuta,0.452,0.312,0.319,0.418,0.288,0.294,H,0.75,0.88,1.63,True,True
-2026-10-04 17:30:00+01:00,Las Palmas,Valladolid,0.36,0.289,0.334,0.367,0.294,0.339,H,0.75,0.88,1.62,True,True
-2026-10-04 20:00:00+01:00,Girona,Mallorca,0.393,0.304,0.324,0.385,0.298,0.317,H,0.75,0.88,1.62,True,True
-2026-10-05 19:30:00+01:00,Cordoba,Tenerife,0.388,0.317,0.351,0.367,0.3,0.333,H,0.75,0.88,1.63,True,True
+2026-10-05 19:30:00+01:00,Cordoba,Tenerife,0.396,0.309,0.347,0.377,0.294,0.33,H,0.7,0.87,1.58,True,True
