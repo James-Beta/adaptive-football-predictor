@@ -1,6 +1,2 @@
 Date,HomeTeam,AwayTeam,Prob_Home_raw,Prob_Draw_raw,Prob_Away_raw,Prob_Home,Prob_Draw,Prob_Away,Predicted_Result,Expected_Home_Goals,Expected_Away_Goals,Expected_Total_Goals,Home_Has_History,Away_Has_History
-2026-10-14 19:45:00+01:00,Norwich,Southampton,0.411,0.303,0.347,0.387,0.286,0.327,H,0.71,0.86,1.58,True,True
-2026-10-14 19:45:00+01:00,Portsmouth,Sheffield United,0.415,0.277,0.335,0.404,0.27,0.326,H,0.72,0.87,1.59,True,True
-2026-10-14 19:45:00+01:00,QPR,Derby,0.433,0.293,0.356,0.4,0.271,0.329,H,0.72,0.87,1.58,True,True
-2026-10-14 20:00:00+01:00,Lincoln,West Ham,0.376,0.329,0.378,0.347,0.304,0.349,A,0.72,0.87,1.59,True,True
-2026-10-15 20:00:00+01:00,Mansfield,Oxford,0.382,0.315,0.363,0.36,0.297,0.342,H,0.72,0.87,1.59,True,True
+2026-10-15 20:00:00+01:00,Mansfield,Oxford,0.389,0.328,0.356,0.362,0.306,0.332,H,0.72,0.85,1.58,True,True
