@@ -1,0 +1,97 @@
+source,league,source_name,canonical_name
+openfootball,E0,AFC Bournemouth,Bournemouth
+openfootball,E0,Arsenal FC,Arsenal
+openfootball,E0,Aston Villa FC,Aston Villa
+openfootball,E0,Brentford FC,Brentford
+openfootball,E0,Brighton & Hove Albion FC,Brighton
+openfootball,E0,Chelsea FC,Chelsea
+openfootball,E0,Coventry City FC,Coventry
+openfootball,E0,Crystal Palace FC,Crystal Palace
+openfootball,E0,Everton FC,Everton
+openfootball,E0,Fulham FC,Fulham
+openfootball,E0,Hull City AFC,Hull
+openfootball,E0,Ipswich Town FC,Ipswich
+openfootball,E0,Leeds United FC,Leeds
+openfootball,E0,Liverpool FC,Liverpool
+openfootball,E0,Manchester City FC,Man City
+openfootball,E0,Manchester United FC,Man United
+openfootball,E0,Newcastle United FC,Newcastle
+openfootball,E0,Nottingham Forest FC,Nott'm Forest
+openfootball,E0,Sunderland AFC,Sunderland
+openfootball,E0,Tottenham Hotspur FC,Tottenham
+openfootball,SP1,Athletic Club,Ath Bilbao
+openfootball,SP1,CA Osasuna,Osasuna
+openfootball,SP1,Club Atlético de Madrid,Ath Madrid
+openfootball,SP1,Deportivo Alavés,Alaves
+openfootball,SP1,Elche CF,Elche
+openfootball,SP1,FC Barcelona,Barcelona
+openfootball,SP1,Getafe CF,Getafe
+openfootball,SP1,Levante UD,Levante
+openfootball,SP1,Málaga CF,Malaga
+openfootball,SP1,RC Celta de Vigo,Celta
+openfootball,SP1,RC Deportivo La Coruña,La Coruna
+openfootball,SP1,RCD Espanyol de Barcelona,Espanol
+openfootball,SP1,Rayo Vallecano de Madrid,Vallecano
+openfootball,SP1,Real Betis Balompié,Betis
+openfootball,SP1,Real Madrid CF,Real Madrid
+openfootball,SP1,Real Racing Club de Santander,Santander
+openfootball,SP1,Real Sociedad de Fútbol,Sociedad
+openfootball,SP1,Sevilla FC,Sevilla
+openfootball,SP1,Valencia CF,Valencia
+openfootball,SP1,Villarreal CF,Villarreal
+openfootball,D1,1. FC Köln,FC Koln
+openfootball,D1,1. FC Union Berlin,Union Berlin
+openfootball,D1,1. FSV Mainz 05,Mainz
+openfootball,D1,Bayer 04 Leverkusen,Leverkusen
+openfootball,D1,Borussia Dortmund,Dortmund
+openfootball,D1,Borussia Mönchengladbach,M'gladbach
+openfootball,D1,Eintracht Frankfurt,Ein Frankfurt
+openfootball,D1,FC Augsburg,Augsburg
+openfootball,D1,FC Bayern München,Bayern Munich
+openfootball,D1,FC Schalke 04,Schalke 04
+openfootball,D1,Hamburger SV,Hamburg
+openfootball,D1,RB Leipzig,RB Leipzig
+openfootball,D1,SC Freiburg,Freiburg
+openfootball,D1,SC Paderborn 07,Paderborn
+openfootball,D1,SV 07 Elversberg,Elversberg
+openfootball,D1,SV Werder Bremen,Werder Bremen
+openfootball,D1,TSG 1899 Hoffenheim,Hoffenheim
+openfootball,D1,VfB Stuttgart,Stuttgart
+openfootball,I1,AC Milan,Milan
+openfootball,I1,AC Monza,Monza
+openfootball,I1,ACF Fiorentina,Fiorentina
+openfootball,I1,AS Roma,Roma
+openfootball,I1,Atalanta BC,Atalanta
+openfootball,I1,Bologna FC 1909,Bologna
+openfootball,I1,Cagliari Calcio,Cagliari
+openfootball,I1,Como 1907,Como
+openfootball,I1,FC Internazionale Milano,Inter
+openfootball,I1,Frosinone Calcio,Frosinone
+openfootball,I1,Genoa CFC,Genoa
+openfootball,I1,Juventus FC,Juventus
+openfootball,I1,Parma Calcio 1913,Parma
+openfootball,I1,SS Lazio,Lazio
+openfootball,I1,SSC Napoli,Napoli
+openfootball,I1,Torino FC,Torino
+openfootball,I1,US Lecce,Lecce
+openfootball,I1,US Sassuolo Calcio,Sassuolo
+openfootball,I1,Udinese Calcio,Udinese
+openfootball,I1,Venezia FC,Venezia
+openfootball,F1,AJ Auxerre,Auxerre
+openfootball,F1,AS Monaco FC,Monaco
+openfootball,F1,Angers SCO,Angers
+openfootball,F1,ES Troyes AC,Troyes
+openfootball,F1,FC Lorient,Lorient
+openfootball,F1,Le Havre AC,Le Havre
+openfootball,F1,Le Mans FC,Le Mans
+openfootball,F1,Lille OSC,Lille
+openfootball,F1,OGC Nice,Nice
+openfootball,F1,Olympique Lyonnais,Lyon
+openfootball,F1,Olympique de Marseille,Marseille
+openfootball,F1,Paris FC,Paris FC
+openfootball,F1,Paris Saint-Germain FC,Paris SG
+openfootball,F1,RC Strasbourg Alsace,Strasbourg
+openfootball,F1,Racing Club de Lens,Lens
+openfootball,F1,Stade Brestois 29,Brest
+openfootball,F1,Stade Rennais FC 1901,Rennes
+openfootball,F1,Toulouse FC,Toulouse

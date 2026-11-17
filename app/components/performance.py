@@ -17,6 +17,15 @@ def render_performance():
         st.info("No performance logs found. Run the pipeline to train/evaluate the model at least once.")
         return
 
+    # The log file still contains rows from the old continuous-learning
+    # backtest (LightGBM, one row per gameweek). Those are a different model
+    # and schema, so keep them out of the current-model view rather than
+    # letting them flatten the trend chart.
+    if 'Gameweek' in df.columns:
+        current = df[df['Gameweek'].isna()]
+        if not current.empty:
+            df = current.copy()
+
     # Top-level metrics from the most recent evaluate() call
     latest = df.iloc[-1]
     col1, col2, col3, col4 = st.columns(4)

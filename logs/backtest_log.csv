@@ -1,0 +1,4 @@
+Date_Evaluated,Matches,Accuracy,Log_Loss,Goals_MAE,Refit,Window_Matches,Cumulative_Accuracy,Cumulative_Log_Loss,Mask_Odds,Refit_Every,N_Estimators
+2026-11-01,49,0.6327,0.8563,1.0992,True,30558,0.6327,0.8563,False,1,30
+2026-11-02,16,0.8125,0.7763,1.2008,True,30607,0.6769,0.8366,False,1,30
+2026-11-01,49,0.6735,0.8798,1.0323,True,30558,0.6735,0.8798,True,1,20

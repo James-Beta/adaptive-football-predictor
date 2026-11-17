@@ -13,11 +13,57 @@ def load_data():
     except FileNotFoundError:
         return pd.DataFrame(), pd.DataFrame()
 
+
+@st.cache_data(ttl=600)
+def load_pending_fixtures():
+    """Fixtures that exist but have no complete odds set (so aren't predicted)."""
+    try:
+        return pd.read_parquet("data/processed/fixtures.parquet")
+    except Exception:
+        return pd.DataFrame()
+
+
+def _render_pending(pending_df):
+    if pending_df.empty:
+        return
+
+    st.divider()
+    st.subheader("Odds pending")
+    st.caption(
+        f"{len(pending_df)} fixture(s) have no complete odds set, so no prediction "
+        "was made. Odds come from football-data.co.uk and The Odds API — set "
+        "`ODDS_API_KEY` to enable the latter."
+    )
+
+    display = pending_df.copy()
+    if 'Date' in display.columns:
+        display['Kickoff'] = pd.to_datetime(
+            display['Date'], errors='coerce', utc=True
+        ).dt.strftime('%Y-%m-%d %H:%M')
+        display = display.sort_values('Kickoff')
+
+    cols = [c for c in ['Kickoff', 'Div', 'HomeTeam', 'AwayTeam', 'Source']
+            if c in display.columns]
+    with st.expander(f"Show {len(display)} fixture(s) awaiting odds", expanded=False):
+        st.dataframe(display[cols], hide_index=True, width='stretch')
+
 def create_radar_chart(home_team, away_team, metrics_df):
     """Generates an interactive Head-to-Head Radar Chart with 0-100 Scaling"""
-    
-    home_stats = metrics_df[metrics_df['team'] == home_team].iloc[-1]
-    away_stats = metrics_df[metrics_df['team'] == away_team].iloc[-1]
+
+    def latest_row(team):
+        rows = metrics_df[metrics_df['team'] == team]
+        if rows.empty:
+            return None
+        if 'Date' in rows.columns:
+            rows = rows.sort_values('Date')
+        return rows.iloc[-1]
+
+    home_stats = latest_row(home_team)
+    away_stats = latest_row(away_team)
+    if home_stats is None or away_stats is None:
+        missing = home_team if home_stats is None else away_team
+        st.warning(f"No rolling form found for {missing} — head-to-head chart unavailable.")
+        return go.Figure()
 
     # Define our stats, and explicitly mark which ones are "Bad" (where lower is better)
     stat_configs = [
@@ -176,10 +222,38 @@ def render_predictions():
     st.header(" This Weekend's Predictions")
     
     preds_df, metrics_df = load_data()
-    
+
+    pending_df = load_pending_fixtures()
+    if not pending_df.empty and 'Has_Odds' in pending_df.columns:
+        pending_df = pending_df[~pending_df['Has_Odds'].fillna(False)].copy()
+    else:
+        pending_df = pd.DataFrame()
+
     if preds_df.empty:
         st.info("No predictions found. Run `python run_live_predictions.py` to generate them.")
+        _render_pending(pending_df)
         return
+
+    # Tell the user how fresh this is — a silent two-week-old table is how the
+    # previous fixtures outage went unnoticed.
+    if 'Generated_At' in preds_df.columns:
+        generated = pd.to_datetime(preds_df['Generated_At'].iloc[0], errors='coerce', utc=True)
+        if pd.notna(generated):
+            age_days = (pd.Timestamp.now(tz='UTC') - generated).days
+            source = preds_df['Fixture_Source'].iloc[0] if 'Fixture_Source' in preds_df.columns else 'unknown'
+            if age_days >= 3:
+                st.warning(
+                    f"⚠ Predictions were generated {age_days} days ago "
+                    f"({generated:%Y-%m-%d %H:%M} UTC, source: {source}). "
+                    "They may not reflect the latest fixtures or form."
+                )
+            else:
+                st.caption(
+                    f"Generated {generated:%Y-%m-%d %H:%M} UTC · source: {source} · "
+                    f"{len(preds_df)} fixtures"
+                )
+    else:
+        st.warning("These predictions have no generation timestamp — they may be stale.")
 
     # 1. Show the Probability Table
     st.dataframe(
@@ -211,3 +285,5 @@ def render_predictions():
             # Generate and display the Plotly Radar Chart
             radar_fig = create_radar_chart(home_team, away_team, metrics_df)
             st.plotly_chart(radar_fig, width='stretch')
+
+    _render_pending(pending_df)
