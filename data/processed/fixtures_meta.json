@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-11-25T05:54:58+00:00",
-  "row_count": 60,
-  "next_match": "2026-11-25T18:00:00+00:00",
+  "generated_at": "2026-11-27T04:40:48+00:00",
+  "row_count": 48,
+  "next_match": "2026-11-27T20:30:00+00:00",
   "sources": {
-    "openfootball": 48,
-    "football-data": 12
+    "openfootball": 48
   },
-  "with_odds": 57
+  "with_odds": 45
 }
